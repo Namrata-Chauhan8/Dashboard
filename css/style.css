@@ -247,6 +247,7 @@ body ::-webkit-scrollbar {
 .card {
   border: none;
   border-radius: 6px;
+  padding: 16px;
 }
 
 /* Media Queries for responsiveness */
@@ -566,6 +567,24 @@ body ::-webkit-scrollbar {
     gap: 10px;
   }
 }
+.carousel-control-next {
+  height: 24px !important;
+  width: 24px !important;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-right: 10%;
+  position: absolute;
+}
+
+.carousel-control-prev {
+  height: 24px !important;
+  width: 24px !important;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 10%;
+  position: absolute;
+}
+
 .navbar-icon,
 .sidebar-icon {
   width: 24px;

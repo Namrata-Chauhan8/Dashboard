@@ -168,9 +168,11 @@ body {
     cursor: pointer;
   }
 
-
 }
 
+//main content styles
+
+//card-1
 .slidecontainer {
   position: relative;
   width: 100%;
@@ -238,6 +240,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
+//card-2
+
 .label-status {
   max-width: 90px;
   min-width: 95px;
@@ -278,6 +282,7 @@ body {
 .card {
   border: none;
   border-radius: 6px;
+  padding: 16px;
 }
 
 /* Media Queries for responsiveness */
@@ -640,23 +645,23 @@ body {
 
 
 
-// .carousel-control-next {
-//   height: 24px !important;
-//   width: 24px !important;
-//   margin-top: 20%;
-//   margin-bottom: 20%;
-//   margin-right: 10%;
-//   position: absolute;
-// }
+.carousel-control-next {
+  height: 24px !important;
+  width: 24px !important;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-right: 10%;
+  position: absolute;
+}
 
-// .carousel-control-prev {
-//   height: 24px !important;
-//   width: 24px !important;
-//   margin-top: 20%;
-//   margin-bottom: 20%;
-//   margin-left: 10%;
-//   position: absolute;
-// }
+.carousel-control-prev {
+  height: 24px !important;
+  width: 24px !important;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 10%;
+  position: absolute;
+}
 
 
 
