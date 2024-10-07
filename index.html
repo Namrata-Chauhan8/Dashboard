@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper" id="wrapper">
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar-wrapper">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <img src="./images/logo.png" alt="Logo" width="37" height="42.6" id="title" />
+          <span class="sidebar-title ml-2">Dubai</span>
+        </div>
+        <div class="sidebar-toggle">
+          <img src="./images/toggle.png" alt="Toggle" id="sidebar-toggle" />
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/home.png" alt="Dashboard" />
+          </div>
+          <span class="sidebar-name">Dashboard</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/doc.png" alt="Induction Documents" />
+          </div>
+          <span class="sidebar-name">Induction Documents</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/folder.png" alt="My Programme" />
+          </div>
+          <span class="sidebar-name">My Programme</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/book.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Learner Handbook</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/calendar.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Calendar events</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/Group 6999.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">My Classes</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/test.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">My Test</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/activities.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">School Activities</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/accomodation.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Accommodation</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/link.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Study links</span>
+        </a>
+        <a href="#" class="sidebar-item d-flex justify-content-between"
+          onclick="toggleDropdown(event, 'courseDropdown')">
+          <div class="d-flex">
+            <div class="sidebar-icon">
+              <img src="./images/course.png" alt="Home" class="mr-3" />
+            </div>
+            <span class="sidebar-name mt-2">Course report</span>
+          </div>
+          <div class="dropDown">
+            <img src="./images/dropDown.png" alt="dropDown" />
+          </div>
+        </a>
+        <div class="dropdown-content" id="courseDropdown" style="display: none">
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/progress.png" alt="Progress Report" class="" />
+            </div>
+            <span class="sidebar-name">Progress report</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/EOC.png" alt="End of Course Report" />
+            </div>
+            <span class="sidebar-name">End of course report</span>
+          </a>
+        </div>
+        <a href="#" class="sidebar-item d-flex justify-content-between"
+          onclick="toggleDropdown(event, 'feedbackDropdown')">
+          <div class="d-flex">
+            <div class="sidebar-icon">
+              <img src="./images/feedback.png" alt="Home" class="mr-3" />
+            </div>
+            <span class="sidebar-name mt-2">Feedback</span>
+          </div>
+          <div class="dropDown">
+            <img src="./images/dropDown.png" alt="dropDown" />
+          </div>
+        </a>
+        <div class="dropdown-content" id="feedbackDropdown" style="display: none">
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/CF.png" alt="Home" class="mr-2" />
+            </div>
+            <span class="sidebar-name">Class Feedback</span>
+          </a>
+        </div>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/ticket.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Student tickets</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <div class="sidebar-icon">
+            <img src="./images/jobs.png" alt="Home" class="mr-2" />
+          </div>
+          <span class="sidebar-name">Jobs board</span>
+        </a>
+        <a href="#" class="sidebar-item d-flex justify-content-between"
+          onclick="toggleDropdown(event, 'entryDropdown')">
+          <div class="d-flex">
+            <div class="sidebar-icon">
+              <img src="./images/entry.png" alt="Home" class="mr-3" />
+            </div>
+            <span class="sidebar-name mt-2">Entry test</span>
+          </div>
+          <div class="dropDown">
+            <img src="./images/dropDown.png" alt="dropDown" />
+          </div>
+        </a>
+        <div class="dropdown-content" id="entryDropdown" style="display: none">
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/GT.png" alt="Grammer Test" />
+            </div>
+            <span class="sidebar-name">Grammer Test</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/WT.png" alt="Writing Test" />
+            </div>
+            <span class="sidebar-name">Writing test</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <div class="sidebar-icon">
+              <img src="./images/ST.png" alt="Speaking Test"  />
+            </div>
+            <span class="sidebar-name">Speaking test</span>
+          </a>
+        </div>
+
+        <script src="js/script.js"></script>
+
+        </script>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <div class="container-fluid navbar-container">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mt-2 mt-lg-0">
+              <a class="liveClass nav-link p-2" href="#">Enter your Live class</a>
+            </li>
+            <li class="nav-item mt-2 mt-lg-0">
+              <a class="nav-link" href="#">
+                <img src="./images/bell.png" alt="Notifications" class="navbar-icon" />
+              </a>
+            </li>
+            <li class="nav-item mt-2 mt-lg-0 d-flex justify-content-between">
+              <img src="./images/profile.png" alt="Profile" class="sidebar-icon2" height="55" width="55" />
+              <a class="nav-link" href="#">
+                <span class="font-weight-bold item-text">Adrea Pae`z</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="container-fluid main-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <span class="card-text">Your level</span>
+                <h4 class="card-title">Elementary</h4>
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="6" value="2" class="slider" id="levelSlider" />
+                  <div class="levels">
+                    <span>A1</span>
+                    <span>A2</span>
+                    <span>B1</span>
+                    <span>B2</span>
+                    <span>C1</span>
+                    <span>C2</span>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <span class="card-text">Remaining weeks</span>
+                  <h4 class="card-title">10 weeks</h4>
+                </div>
+                <div class="progress mb-1">
+                  <div class="progress-bar bg-dark" role="progressbar" style="width: 30%"></div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="mt-2">0</span>
+                  <span class="mt-2">24</span>
+                </div>
+                <div class="mt-3"></div>
+                <span class="card-text">Course end date</span>
+                <h4 class="card-title">11, Apr, 2019</h4>
+                <div class="progress mb-1">
+                  <div class="progress-bar" role="progressbar" style="width: 30%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <span class="card-text">My classes</span>
+                </div>
+                <div class="client d-flex align-items-center mt-2">
+                  <div class="mr-3">
+                    <img src="./images/TOM.png" alt="Home" height="80px" width="80px" class="rounded-circle" />
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center group">
+                      <div>
+                        <div class="font-weight-bold">Tom Hudd</div>
+
+                        <div class="label-status d-flex justify-content-between">
+                          <div> online </div>
+                          <div>
+                            <img src="./images/greenDot.png" alt="Online" class="ml-2 rounded-circle" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <button class="badge badge-dark p-2">
+                          Pre-intermediate
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="info-section d-flex justify-content-between">
+                      <div class="info-item">
+                        <span class="card-text">Schedule</span>
+                        <p>12:00 - 13:00</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Campus:</span>
+                        <p>JLT Masaya</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Floor:</span>
+                        <p>36th</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Classroom:</span>
+                        <p>10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="client d-flex align-items-center mt-2">
+                  <div class="mr-3">
+                    <img src="./images/jasmine.png" alt="Home" height="80px" width="80px" class="rounded-circle" />
+                  </div>
+
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center group">
+                      <div>
+                        <span class="font-weight-bold">Jasmine Navarro</span>
+
+                        <div class="label-status d-flex justify-content-between">
+                          <div> online </div>
+                          <div>
+                            <img src="./images/greenDot.png" alt="Online" class="ml-2 rounded-circle" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <button class="badge badge-dark p-2">
+                          Pre-intermediate
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="info-section d-flex justify-content-between">
+                      <div class="info-item">
+                        <span class="card-text">Schedule</span>
+                        <p>12:00 - 13:00</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Campus:</span>
+                        <p>JLT Masaya</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Floor:</span>
+                        <p>36th</p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="info-item">
+                        <span class="card-text">Classroom:</span>
+                        <p>10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Attendence</h5>
+                <div class="chart-container">
+                  <div class="chart-labels d-flex justify-content-between flex-wrap">
+                    <div class="label-item">
+                      <span class="color-box" style="background-color: #f3f5f9"></span>
+                      <p class="mt-3">Present</p>
+                    </div>
+                    <div class="label-item">
+                      <span class="color-box" style="background-color: #ffb71c"></span>
+                      <p class="mt-3">Late</p>
+                    </div>
+                    <div class="label-item">
+                      <span class="color-box" style="background-color: #ff8200"></span>
+                      <p class="mt-3">Absent</p>
+                    </div>
+                    <div class="label-item">
+                      <span class="color-box" style="background-color: #ff931e"></span>
+                      <p class="mt-3">Holiday</p>
+                    </div>
+                  </div>
+                  <div>
+                    <canvas id="myChart" width="100" height="100"></canvas>
+                  </div>
+                </div>
+
+                <script src="js/chart.js"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title text-center">Meet sophia</h4>
+                <h4 class="card-title text-center">Your virtual assistant</h4>
+                <div class="text-center mb-5">
+                  <button class="badges">Ask any question</button>
+                </div>
+                <img src="./images/sophia-img.png" alt="Home" height="50%" width="50%"
+                  class="rounded-circle img-fluid d-block mx-auto" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100 p-4">
+              <h5 class="card-title">Social activities</h5>
+              <!-- Carousel Container -->
+              <div id="activityCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="pb-lg-4">
+                  <div class="carousel-inner">
+                    <!-- First Slide (Active) -->
+                    <div class="carousel-item active">
+                      <div class="activity-card">
+                        <div class="activity-image">
+                          <img
+                            alt="Image of Downtown Dubai with Burj Khalifa in the background and people walking around the area"
+                            max-width="100%" src="./images/city.png" max-height="100%" />
+                        </div>
+                        <div class="activity-details">
+                          <div>
+                            <div class="activity-title">
+                              Downtown Dubai walk
+                            </div>
+                            <div class="activity-info">
+                              <div>
+                                Price:
+                                <br />
+                                600 GBP
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Date:
+                                <br />
+                                Wed. 30th
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Schedule:
+                                <br />
+                                11:00 - 13:00
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="register-button d-flex justify-content-between align-items-center group">
+                              <div>
+                                <span class="font-weight-normal">Activity Status</span>
+
+                                <div class="label-status d-flex justify-content-between">
+                                  <div> Active </div>
+                                  <div>
+                                    <img src="./images/greenDot.png" alt="Online" class="ml-2 rounded-circle" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="">
+                                <button class="badges">Register</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                      <div class="activity-card">
+                        <div class="activity-image">
+                          <img
+                            alt="Image of Downtown Dubai with Burj Khalifa in the background and people walking around the area"
+                            height="300" src="./images/city.png" width="400" />
+                        </div>
+                        <div class="activity-details">
+                          <div>
+                            <div class="activity-title">
+                              Downtown Dubai walk
+                            </div>
+                            <div class="activity-info">
+                              <div>
+                                Price:
+                                <br />
+                                500 GBP
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Date:
+                                <br />
+                                Thurs. 15th
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Schedule:
+                                <br />
+                                09:00 - 11:00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center group">
+                            <div>
+                              <span class="font-weight-normal">Activity Status</span>
+
+                              <div class="label-status d-flex justify-content-between">
+                                <div> Active </div>
+                                <div>
+                                  <img src="./images/greenDot.png" alt="Online" class="ml-2 rounded-circle" />
+                                </div>
+                              </div>
+                            </div>
+                            <button class="badges">Register</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Third Slide -->
+                    <div class="carousel-item">
+                      <div class="activity-card">
+                        <div class="activity-image">
+                          <img
+                            alt="Image of Downtown Dubai with Burj Khalifa in the background and people walking around the area"
+                            height="300" src="./images/city.png" width="400" />
+                        </div>
+                        <div class="activity-details">
+                          <div>
+                            <div class="activity-title">
+                              Downtown Dubai walk
+                            </div>
+                            <div class="activity-info">
+                              <div>
+                                Price:
+                                <br />
+                                800 GBP
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Date:
+                                <br />
+                                Fri. 25th
+                              </div>
+                              <div class="divider"></div>
+                              <div>
+                                Schedule:
+                                <br />
+                                17:00 - 20:00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center group">
+                            <div>
+                              <div class="font-weight-normal">Activity Status</div>
+
+                              <div class="label-status d-flex justify-content-between">
+                                <div> Active </div>
+                                <div>
+                                  <img src="./images/greenDot.png" alt="Online" class="ml-2 rounded-circle" />
+                                </div>
+                              </div>
+                            </div>
+                            <button class="badges">Register</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel Controls -->
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#activityCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#activityCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">My test results</h5>
+
+                <div class="dropdown float-right">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    My test results
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <canvas id="myChart2"></canvas>
+                <script src="js/chart2.js"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <p class="footer">Powered by studybox.ai © 2024</p>
+
+    <div class="icon-container">
+      <i class="fab fa-youtube"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fab fa-facebook"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fab fa-tiktok"></i>
+    </div>
+  </footer>
+
+  <script src="js/sidebar.js"></script>
+  <!-- Bootstrap CSS -->
+</body>
+
+</html>
