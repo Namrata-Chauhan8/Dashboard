@@ -73,7 +73,6 @@ body ::-webkit-scrollbar {
   cursor: pointer;
 }
 .sidebar .sidebar-menu .sidebar-item span {
-  font-weight: 500;
   display: none;
 }
 .sidebar .sidebar-menu .sidebar-item.expanded span {
@@ -197,7 +196,7 @@ body ::-webkit-scrollbar {
 
 .client {
   background-color: #f3f5f9;
-  padding: 15px;
+  padding: 15px 22px;
   border: none;
   border-radius: 6px;
   display: flex;
@@ -205,6 +204,7 @@ body ::-webkit-scrollbar {
   box-sizing: border-box;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
 .label-status {
@@ -212,11 +212,11 @@ body ::-webkit-scrollbar {
   min-width: 95px;
   background-color: #e8eaf4;
   color: #333;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 0px 5px 0px 9px;
   text-align: center;
   font-size: 10px;
-  font-family: Poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .info-section {
@@ -229,7 +229,7 @@ body ::-webkit-scrollbar {
 .info-item {
   font-size: 14px;
   flex: 1;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .info-item span {
@@ -350,21 +350,25 @@ body ::-webkit-scrollbar {
 .chart-labels {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   margin-right: 30%;
+  flex-wrap: wrap;
 }
 
 .label-item {
   display: flex;
   align-items: center;
-  margin: 5px 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
 .color-box {
   width: 15px;
   height: 15px;
-  margin-right: 10px;
   border-radius: 3px;
+  margin-right: 10px;
 }
 
 #myChart {
