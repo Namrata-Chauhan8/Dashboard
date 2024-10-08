@@ -1,12 +1,11 @@
 "use strict";
 
-// Your data
 var xValues = ["Present", "Late", "Absent", "Holiday"];
 var yValues = [90.98, 4.02, 2, 4.02];
 var barColors = ["#f3f5f9", "#ffb71c", "#ff8200", "#ff931e"];
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: "doughnut",
   data: {
     labels: xValues,
     datasets: [{
@@ -27,7 +26,7 @@ var myChart = new Chart(ctx, {
     },
     responsive: true,
     maintainAspectRatio: false,
-    cutout: '80%' // Doughnut hole size
+    cutout: "80%" // Doughnut hole size
 
   },
   plugins: [{
@@ -46,11 +45,11 @@ var myChart = new Chart(ctx, {
     //   ctx.save();
     // },
     afterEvent: function afterEvent(chart, args) {
-      if (args.event.type === 'mousemove') {
-        var chartElement = document.getElementById('myChart');
-        chartElement.classList.toggle('enlarge'); // Toggle enlarge class on click
+      if (args.event.type === "mousemove") {
+        var chartElement = document.getElementById("myChart");
+        chartElement.classList.toggle("enlarge"); // Toggle enlarge class on click
 
-        var activePoints = chart.getElementsAtEventForMode(args.event, 'nearest', {
+        var activePoints = chart.getElementsAtEventForMode(args.event, "nearest", {
           intersect: true
         }, false);
 
@@ -64,8 +63,8 @@ var myChart = new Chart(ctx, {
 
           _ctx.restore();
 
-          _ctx.font = '1.5em sans-serif';
-          _ctx.textBaseline = 'middle';
+          _ctx.font = "1.5em sans-serif";
+          _ctx.textBaseline = "middle";
           var text = "".concat(label, ": ").concat(value, "%");
           var textX = Math.round((width - _ctx.measureText(text).width) / 2);
           var textY = height / 2;

@@ -27,7 +27,7 @@
   <body>
     <div class="wrapper" id="wrapper">
       <!-- sidebar -->
-      <div class="sidebar" id="sidebar-wrapper">
+      <div class="sidebar collapsed" id="sidebar-wrapper">
         <div class="sidebar-header">
           <div class="sidebar-logo">
             <img
@@ -39,8 +39,8 @@
             />
             <span class="sidebar-title ml-2">Dubai</span>
           </div>
-          <div class="sidebar-toggle">
-            <img src="./images/toggle.png" alt="Toggle" id="sidebar-toggle" />
+          <div class="sidebar-toggle" id="sidebar-toggle">
+            <img src="./images/open-close.svg" alt="Toggle" />
           </div>
         </div>
         <div class="sidebar-menu">
@@ -64,43 +64,43 @@
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/book.png" alt="Home" class="mr-2" />
+              <img src="./images/book.png" alt="Home" />
             </div>
             <span class="sidebar-name">Learner Handbook</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/calendar.png" alt="Home" class="mr-2" />
+              <img src="./images/calendar.png" alt="Home" />
             </div>
             <span class="sidebar-name">Calendar events</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/Group 6999.png" alt="Home" class="mr-2" />
+              <img src="./images/Group 6999.png" alt="Home" />
             </div>
             <span class="sidebar-name">My Classes</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/test.png" alt="Home" class="mr-2" />
+              <img src="./images/test.png" alt="Home" />
             </div>
             <span class="sidebar-name">My Test</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/activities.png" alt="Home" class="mr-2" />
+              <img src="./images/activities.png" alt="Home" />
             </div>
             <span class="sidebar-name">School Activities</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/accomodation.png" alt="Home" class="mr-2" />
+              <img src="./images/accomodation.png" alt="Home" />
             </div>
             <span class="sidebar-name">Accommodation</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/link.png" alt="Home" class="mr-2" />
+              <img src="./images/link.png" alt="Home" />
             </div>
             <span class="sidebar-name">Study links</span>
           </a>
@@ -111,12 +111,12 @@
           >
             <div class="d-flex">
               <div class="sidebar-icon">
-                <img src="./images/course.png" alt="Home" class="mr-3" />
+                <img src="./images/course.png" alt="Home" class="dropdown" />
               </div>
               <span class="sidebar-name mt-2">Course report</span>
             </div>
             <div class="dropDown">
-              <img src="./images/dropDown.png" alt="dropDown" />
+              <img src="./images/open-close.svg" alt="dropDown" />
             </div>
           </a>
           <div
@@ -126,11 +126,7 @@
           >
             <a href="#" class="sidebar-item">
               <div class="sidebar-icon">
-                <img
-                  src="./images/progress.png"
-                  alt="Progress Report"
-                  class=""
-                />
+                <img src="./images/progress.png" alt="Progress Report" />
               </div>
               <span class="sidebar-name">Progress report</span>
             </a>
@@ -148,12 +144,12 @@
           >
             <div class="d-flex">
               <div class="sidebar-icon">
-                <img src="./images/feedback.png" alt="Home" class="mr-3" />
+                <img src="./images/feedback.png" alt="Home" />
               </div>
               <span class="sidebar-name mt-2">Feedback</span>
             </div>
             <div class="dropDown">
-              <img src="./images/dropDown.png" alt="dropDown" />
+              <img src="./images/open-close.svg" alt="dropDown" />
             </div>
           </a>
           <div
@@ -163,20 +159,20 @@
           >
             <a href="#" class="sidebar-item">
               <div class="sidebar-icon">
-                <img src="./images/CF.png" alt="Home" class="mr-2" />
+                <img src="./images/CF.png" alt="Home" />
               </div>
               <span class="sidebar-name">Class Feedback</span>
             </a>
           </div>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/ticket.png" alt="Home" class="mr-2" />
+              <img src="./images/ticket.png" alt="Home" />
             </div>
             <span class="sidebar-name">Student tickets</span>
           </a>
           <a href="#" class="sidebar-item">
             <div class="sidebar-icon">
-              <img src="./images/jobs.png" alt="Home" class="mr-2" />
+              <img src="./images/jobs.png" alt="Home" />
             </div>
             <span class="sidebar-name">Jobs board</span>
           </a>
@@ -187,12 +183,12 @@
           >
             <div class="d-flex">
               <div class="sidebar-icon">
-                <img src="./images/entry.png" alt="Home" class="mr-3" />
+                <img src="./images/entry.png" alt="Home" />
               </div>
               <span class="sidebar-name mt-2">Entry test</span>
             </div>
             <div class="dropDown">
-              <img src="./images/dropDown.png" alt="dropDown" />
+              <img src="./images/open-close.svg" alt="dropDown" />
             </div>
           </a>
           <div
@@ -218,6 +214,11 @@
               </div>
               <span class="sidebar-name">Speaking test</span>
             </a>
+            <div class="hamburger-icon" id="hamburger-menu">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
           </div>
 
           <script src="js/script.js"></script>
@@ -225,7 +226,9 @@
       </div>
 
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light mb-4 sticky-navbar"
+      >
         <div class="container-fluid navbar-container">
           <button
             class="navbar-toggler ms-auto"
@@ -242,9 +245,9 @@
           <div class="navbar-collapse collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item mt-2 mt-lg-0">
-                <a class="nav-link liveClass p-2" href="#"
-                  >Enter your Live class</a
-                >
+                <a class="nav-link liveClass p-2" href="#">
+                  Enter your Live class
+                </a>
               </li>
               <li class="nav-item mt-2 mt-lg-0">
                 <a class="nav-link" href="#">
@@ -274,10 +277,10 @@
 
       <!-- Main Content -->
       <div class="content">
-        <div class="container-fluid main-content">
-          <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100">
+        <div class="container-fluid main-content" id="mainContent">
+          <div class="row row-content">
+            <div class="col-lg-3 col-md-5 col-sm-12 mb-4">
+              <div class="card custom-card h-100">
                 <div class="card-body">
                   <span class="card-text">Your level</span>
                   <h4 class="card-title">Elementary</h4>
@@ -328,8 +331,8 @@
               </div>
             </div>
 
-            <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100">
+            <div class="col-lg-5 col-md-7 col-sm-12 mb-4">
+              <div class="card custom-card h-100">
                 <div class="card-body">
                   <div class="mb-3">
                     <span class="card-text">My classes</span>
@@ -460,8 +463,8 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="card custom-card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Attendence</h5>
                   <div class="chart-container">
@@ -504,10 +507,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100">
+
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="card custom-card h-100">
                 <div class="card-body">
                   <h4 class="card-title text-center">Meet sophia</h4>
                   <h4 class="card-title text-center">Your virtual assistant</h4>
@@ -525,8 +527,8 @@
               </div>
             </div>
 
-            <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100 p-4">
+            <div class="col-lg-5 col-md-7 col-sm-12 mb-4">
+              <div class="card custom-card h-100 p-4">
                 <h5 class="card-title">Social activities</h5>
                 <!-- Carousel Container -->
                 <div
@@ -761,8 +763,8 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-              <div class="card h-100">
+            <div class="col-lg-4 col-md-5 col-sm-12 mb-4">
+              <div class="card custom-card h-100">
                 <div class="card-body">
                   <h5 class="card-title">My test results</h5>
 

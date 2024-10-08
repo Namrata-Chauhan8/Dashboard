@@ -27,6 +27,10 @@ body {
   &.collapsed {
     width: 70px;
 
+    .sidebar-item {
+      padding: 5px 20px;
+    }
+
     .sidebar-title {
       display: none;
     }
@@ -35,9 +39,12 @@ body {
       display: none;
     }
 
+    .dropDown {
+      display: none;
+    }
+
     .sidebar-toggle {
-      margin-top: 10px;
-      margin-left: 0;
+      display: none;
     }
   }
 
@@ -51,6 +58,17 @@ body {
     .sidebar-item span {
       display: inline;
     }
+
+    .dropDown {
+      display: inline;
+
+      &.img {
+        transform: rotate(180deg);
+        width: 12px;
+        height: 7px;
+      }
+    }
+
   }
 
   .sidebar-title {
@@ -112,16 +130,14 @@ body {
     .sidebar-toggle {
       cursor: pointer;
       transition: margin-left 0.5s;
-
-      &.collapsed {
-        margin-top: 10px;
-        margin-left: 0;
-        align-self: flex-start;
-      }
-
-      &.expanded {
-        margin-left: auto;
-      }
+      background-color: white;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      border-radius: 6px;
     }
   }
 
@@ -280,10 +296,13 @@ body {
 }
 
 .card {
-  border: none;
-  border-radius: 6px;
-  padding: 16px;
+  &.custom-card {
+    border: 0;
+    border-radius: 6px;
+    padding: 16px;
+  }
 }
+
 
 /* Media Queries for responsiveness */
 
@@ -345,7 +364,7 @@ body {
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 50px;
+    width: 70px;
   }
 
   .content {
@@ -380,7 +399,9 @@ body {
 }
 
 .row {
-  padding-left: 90px;
+  &.row-content {
+    padding-left: 90px;
+  }
 }
 
 
@@ -749,7 +770,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: #f3f5f9;
 
   .icon-container {
     display: flex;
