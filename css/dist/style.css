@@ -163,7 +163,7 @@ body ::-webkit-scrollbar {
   appearance: none;
   width: 100%;
   height: 7px;
-  background: #ddd;
+  background: #f3f5f9;
   border-radius: 5px;
   outline: none;
   margin: 10px 0;
@@ -198,11 +198,14 @@ body ::-webkit-scrollbar {
 .progress {
   width: 100%;
   height: 8px;
-  background-color: #e0e0e0;
   margin: 0 auto;
+  background-color: #f3f5f9;
 }
 
-.progress-bar {
+.progress-bar.one {
+  background-color: #000000;
+}
+.progress-bar.two {
   background-color: #FF8200;
 }
 
@@ -217,6 +220,17 @@ body ::-webkit-scrollbar {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
+}
+
+.card-text.header {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+.card-text.info {
+  font-size: 14px;
+  margin: 0;
 }
 
 .label-status {
@@ -262,19 +276,13 @@ body ::-webkit-scrollbar {
   padding: 16px;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .client {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 1440px) {
+  .card-text.info {
+    font-size: 10px;
   }
 
-  .info-section {
-    flex-direction: column;
-  }
-
-  .divider {
-    display: none;
+  .info-item {
+    font-size: 10px;
   }
 
   .info-item p {
@@ -283,25 +291,56 @@ body ::-webkit-scrollbar {
 
   .group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .client {
-    padding: 10px;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .info-section {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .info-item p {
+    margin: 0;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
-    /* Increase gap for better readability */
+  }
+}
+/* Media Queries for responsiveness */
+@media (max-width: 576px) {
+  .card-text.info {
+    font-size: 10px;
+  }
+
+  .info {
+    font-size: 10px;
+  }
+
+  .client {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section {
+    flex-direction: row;
+    gap: 10px;
   }
 
   .info-item {
     font-size: 12px;
-    /* Smaller font size on mobile */
   }
 
   .label-status {
@@ -411,7 +450,7 @@ body ::-webkit-scrollbar {
     display: flex;
   }
 }
-@media (max-width: 1425px) {
+@media (max-width: 1440px) {
   .chart-container {
     display: flex;
     flex-direction: column;
@@ -534,11 +573,23 @@ body ::-webkit-scrollbar {
   border-radius: 5px;
   margin-left: 5px;
   border: none;
+  font-size: 12px;
+}
+.badges.pre {
+  background-color: #000000;
+}
+.badges.pre:hover {
+  background-color: #ff6b00;
+  color: #ffffff;
+}
+.badges.register {
+  font-size: 14px;
 }
 
 .badges:hover {
   background-color: #000000;
   color: #ffffff;
+  transition: all 0.9s ease;
 }
 
 @media (max-width: 768px) {
@@ -550,7 +601,7 @@ body ::-webkit-scrollbar {
   }
 
   .activity-image {
-    width: 100%;
+    width: 80%;
   }
 
   .activity-image img {
@@ -559,7 +610,7 @@ body ::-webkit-scrollbar {
   }
 
   .activity-details {
-    width: 100%;
+    width: 80%;
   }
 
   .activity-info {
@@ -574,18 +625,7 @@ body ::-webkit-scrollbar {
     gap: 10px;
   }
 }
-@media (max-width: 1500px) {
-  .carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px;
-  }
-
+@media (max-width: 1440px) {
   .register-button {
     display: flex;
     flex-direction: column;
